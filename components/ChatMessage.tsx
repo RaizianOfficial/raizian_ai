@@ -13,8 +13,8 @@ export const ChatMessage: React.FC<Props> = ({ message }) => {
   const bubbleColor =
     theme === "cyan"
       ? isUser
-        ? "bg-[#00CCFF30] border border-[#0CF]/40"
-        : "bg-[#111]/70 border border-[#0CF]/20"
+        ? "bg-[#0CF]/20 border border-[#0CF]/40"
+        : "bg-[#002233]/70 border border-[#0CF]/20"
       : isUser
         ? "bg-[#ff009d30] border border-[#ff009d60]"
         : "bg-[#111]/70 border border-[#ff009d30]";
@@ -24,7 +24,7 @@ export const ChatMessage: React.FC<Props> = ({ message }) => {
       className={`flex ${isUser ? "justify-end" : "justify-start"} transition-all duration-300`}
     >
       <div
-        className={`max-w-[80%] md:max-w-[70%] text-sm rounded-2xl px-4 py-3 mb-3 shadow-[0_0_10px_rgba(0,0,0,0.3)] ${bubbleColor}`}
+        className={`max-w-[100%] md:max-w-[70%] text-sm rounded-2xl px-4 py-3 mb-3 shadow-[0_0_10px_rgba(0,0,0,0.3)] ${bubbleColor}`}
       >
         {message.text}
       </div>
